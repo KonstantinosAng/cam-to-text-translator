@@ -1,4 +1,17 @@
-# Real time cam translator
+# Cam to text translator
+A cam to tex translator using pytesseract and openCV.
+
+## Installation
+
+Clone this repo, install python requirements using requirements.txt.
+Also install Tesseract OCR and specify the absolute path in the [main python file](main.py).
+
+## Usage
+
+Example code
+```
+
+```
 
 ## Supported languages
 
@@ -66,3 +79,16 @@
 62. Welsh - cy
 63. Indonesian - id
 64. Yiddish - yi
+
+## Example
+English to Spanish Translation
+<table>
+  <tr>
+    <td align="center" style="font-weight:bold"> English </td>
+    <td align="center" style="font-weight:bold"> Spanish </td>
+  </tr>
+  <tr>
+    <td><img src="src/img/img1.jpg" width=435 height=480></td>
+    <td><img src="src/img/img2.jpg" width=435 height=480></td>
+  </tr>
+</table>
