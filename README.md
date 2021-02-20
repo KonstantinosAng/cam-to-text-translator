@@ -4,7 +4,7 @@ A cam to tex translator using pytesseract and openCV.
 ## Installation
 
 Clone this repo, install python requirements using requirements.txt.
-Also install Tesseract OCR and specify the absolute path in the [main python file](main.py).
+Also install [Tesseract OCR](https://github.com/tesseract-ocr/tesseract) and specify the absolute path in the [main python file](main.py).
 
 ## Usage
 
