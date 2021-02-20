@@ -76,4 +76,5 @@ if __name__ == "__main__":
     find_text(cv2.imread(options.image_path), options.language, show=True)
   
   if options.video == 'yes':
+    if options.device.isdigit(): options.device = int(options.device)
     video(options.device, options.language)
