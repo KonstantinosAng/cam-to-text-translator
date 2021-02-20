@@ -3,9 +3,7 @@ import os
 import pytesseract
 from pytesseract import image_to_string
 from pytesseract import Output
-from PIL import Image, ImageDraw
 from google_trans_new import google_translator
-from greek_alphabet import greek_alphabet
 
 ABSOLUTE_FILE_PATH = os.path.dirname(os.path.realpath(__file__))
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
@@ -41,10 +39,8 @@ def find_text(image, language, show=False):
   results = pytesseract.image_to_data(rgb, output_type=Output.DICT)
   # loop over each of the individual text localizations
   for i in range(0, len(results["text"])):
-    x = results["left"][i]
-    y = results["top"][i]
-    w = results["width"][i]
-    h = results["height"][i]
+    x, y = results["left"][i], results["top"][i]
+    w, h = results["width"][i], results["height"][i]
     text = results["text"][i]
     conf = int(results["conf"][i])
     if conf > 75 and len(full_text) > 3:
@@ -66,7 +62,7 @@ if __name__ == "__main__":
   parser = OptionParser()
   parser.add_option('-l', action='store', default='en', type='string', dest='language', help='es, ru')
   parser.add_option('-i', action='store', default='no', type='string', dest='image', help='yes or no')
-  parser.add_option('-p', action='store', default='d:/dev/real-time-cam-text-translator/src/img/img1.jpg', type='string', dest='image_path', help='image absolute path')
+  parser.add_option('-p', action='store', default='d:/dev/cam-to-text-translator/src/img/img1.jpg', type='string', dest='image_path', help='image absolute path')
   parser.add_option('-v', action='store', default='no', type='string', dest='video', help='yes or no')
   parser.add_option('-d', action='store', default='http://192.168.1.17:4747/mjpegfeed?640x480', type='string', dest='device', help='video device, 0 for laptop camera or ip address for ip camera')
 

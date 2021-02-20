@@ -14,13 +14,13 @@ Options:
 
 -l, default='en', language code to translate to, see supported languages
 -i, default='no', use image or not ('yes' or 'no')
--p, default='d:/dev/real-time-cam-text-translator/src/img/img1.jpg', absolute path to the image
+-p, default='d:/dev/cam-to-text-translator/src/img/img1.jpg', absolute path to the image
 -v, default='no', use video or not ('yes' or 'no')
 -d, default='http://192.168.1.17:4747/mjpegfeed?640x480', video device 0 for laptop camera or ip address for ip camera
 
 
 # translate from image
-python src/main.py -l en -i yes -p d:/dev/real-time-cam-text-translator/src/img/img1.jpg
+python src/main.py -l en -i yes -p d:/dev/cam-to-text-translator/src/img/img1.jpg
 
 # stream from web cam
 python src/main.py -l en -v yes -d http://192.168.1.17:4747/mjpegfeed?640x480
